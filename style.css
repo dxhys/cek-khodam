@@ -1,0 +1,289 @@
+/* Gaya Umum */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Mencegah overflow latar belakang */
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Pastikan di belakang konten lain */
+    background-image: url('https://cdn1-production-images-kly.akamaized.net/eZJEjcgRfKHcY0kyDyQbF4cCpHM=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3042078/original/035191300_1580892220-page.jpg');
+    background-size: cover; /* Meliputi seluruh elemen */
+    filter: blur(8px); /* Terapkan efek blur ke gambar latar belakang */
+    -webkit-filter: blur(8px); /* Untuk versi Safari yang lebih lama */
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sisanya CSS Anda yang ada */
+
+
+.message {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.inputSection {
+    margin-bottom: 20px;
+}
+
+.inputLabel {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: #2c3e50;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    background: #1abc9c;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #16a085;
+}
+
+.svgIcon {
+    fill: #fff;
+    margin-right: 10px;
+}
+
+.loader {
+    display: none;
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1c40f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.loading {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.results-summary-container {
+    display: none;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.result-text-box {
+    margin-bottom: 20px;
+}
+
+.heading-secondary {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.summary__cta {
+    display: flex;
+    justify-content: center;
+}
+
+.summary__cta .btn {
+    border: none;
+    width: 12em;
+    height: 3em;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #831010;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+}
+
+.sparkle {
+    fill: #AAAAAA;
+    transition: all 800ms ease;
+}
+
+.text {
+    font-weight: 600;
+    color: #AAAAAA;
+    font-size: 1em;
+    text-align: center;
+}
+
+.btn:hover {
+    background: linear-gradient(0deg,#A47CF3,#683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917FF;
+    transform: translateY(-2px);
+}
+
+.btn:hover .text {
+    color: white;
+}
+
+.btn:hover .sparkle {
+    fill: white;
+    transform: scale(1.2);
+}
+
+/* Animasi berkedip */
+.blink {
+    animation: blink-animation 2s infinite;
+    -webkit-animation: blink-animation 2s infinite;
+}
+
+@keyframes blink-animation {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.5;
+    }
+}
+
+.follow-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    height:20%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Menambahkan z-index untuk memastikan tampil di atas konten lain */
+}
+
+.follow-btn {
+    position: relative;
+    width: 130px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px #FFB700 solid;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.follow-btn .text1 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 22%;
+}
+
+.follow-btn .text2 {
+    position: absolute;
+    top: 25%;
+    left: -50px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+.follow-btn .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+}
+
+.follow-btn .icon::before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 33px;
+    border-radius: 30px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.follow-btn:hover .icon {
+    transform: translateX(96px);
+    transition: transform 0.5s;
+}
+
+.follow-btn:hover .text2 {
+    transform: translateX(100px);
+    transition: transform 0.6s;
+}
+
+.follow-btn:active {
+    transform: scale(1.03);
+}

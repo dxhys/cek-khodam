@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Khodam Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span class="_ac2a" title="jumlah followers" style="display:none;">
+        <span class="html-span xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1hl2dhg x16tdsg8 x1vvkbs">202</span>
+    </span>
+
+    <div class="follow-container">
+        <a href="https://www.instagram.com/dxhys.19_" target="_blank">
+            <button class="follow-btn">
+                <span class="icon">
+                    <svg height="33" viewBox="0 0 128 128" width="33" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <linearGradient id="a" gradientTransform="matrix(1 0 0 -1 594 633)" gradientUnits="userSpaceOnUse" x1="-566.711" x2="-493.288" y1="516.569" y2="621.43">
+                            <stop offset="0" stop-color="#ffb900"></stop>
+                            <stop offset="1" stop-color="#9100eb"></stop>
+                        </linearGradient>
+                        <circle cx="64" cy="64" fill="url(#a)" r="64"></circle>
+                        <g fill="#fff">
+                            <path d="m82.333 104h-36.666c-11.947 0-21.667-9.719-21.667-21.667v-36.666c0-11.948 9.72-21.667 21.667-21.667h36.666c11.948 0 21.667 9.719 21.667 21.667v36.667c0 11.947-9.719 21.666-21.667 21.666zm-36.666-73.333c-8.271 0-15 6.729-15 15v36.667c0 8.271 6.729 15 15 15h36.666c8.271 0 15-6.729 15-15v-36.667c0-8.271-6.729-15-15-15z"></path>
+                            <path d="m64 84c-11.028 0-20-8.973-20-20 0-11.029 8.972-20 20-20s20 8.971 20 20c0 11.027-8.972 20-20 20zm0-33.333c-7.352 0-13.333 5.981-13.333 13.333 0 7.353 5.981 13.333 13.333 13.333s13.333-5.98 13.333-13.333c0-7.352-5.98-13.333-13.333-13.333z"></path>
+                            <circle cx="85.25" cy="42.75" r="4.583"></circle>
+                        </g>
+                    </svg>
+                </span>
+                <span class="text1">FindMe</span>
+                <span class="text2" id="followerCount">0</span>
+            </button>
+        </a>
+    </div>
+
+    <script>
+        // Ambil elemen yang mengandung jumlah pengikut
+        const followerElement = document.querySelector('span.html-span.xdj266r.x11i5rnm.xat24cr.x1mh8g0r.xexx8yu.x4uap5.x18d9i69.xkhd6sd.x1hl2dhg.x16tdsg8.x1vvkbs');
+        
+        // Ambil nilai jumlah pengikut dari elemen tersebut
+        const followerCount = followerElement ? followerElement.innerText : '0';
+        
+        // Perbarui teks pada elemen dengan id "followerCount"
+        document.getElementById('followerCount').innerText = followerCount;
+    </script>
+
+    <div class="background-image"></div>
+    <div class="container">
+        <div class="viewBox">
+            <div class="content">
+                <p id="titleMessage" class="message">Check Khodam</p>              
+                <div id="inputSection" class="inputSection">
+                    <p class="inputLabel">Masukkan nama kamu:</p>
+                    <div class="searchBox">
+                        <input id="inputNama" class="searchInput" type="text" placeholder="Asep">
+                        <button id="btnCek" class="button">
+                            <svg class="svgIcon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Layer_2" data-name="Layer 2">
+                                    <path d="M18,11a1,1,0,0,1-1,1,5,5,0,0,0-5,5,1,1,0,0,1-2,0,5,5,0,0,0-5-5,1,1,0,0,1,0-2,5,5,0,0,0,5-5,1,1,0,0,1,2,0,5,5,0,0,0,5,5A1,1,0,0,1,18,11Z"></path>
+                                    <path d="M19,24a1,1,0,0,1-1,1,2,2,0,0,0-2,2,1,1,0,0,1-2,0,2,2,0,0,0-2-2,1,1,0,0,1,0-2,2,2,0,0,0,2-2,1,1,0,0,1,2,0,2,2,0,0,0,2,2A1,1,0,0,1,19,24Z"></path>
+                                    <path d="M28,17a1,1,0,0,1-1,1,4,4,0,0,0-4,4,1,1,0,0,1-2,0,4,4,0,0,0-4-4,1,1,0,0,1,0-2,4,4,0,0,0,4-4,1,1,0,0,1,2,0,4,4,0,0,0,4,4A1,1,0,0,1,28,17Z"></path>
+                                </g>
+                            </svg>
+                            Cek
+                        </button>
+                    </div>
+                </div>
+                <div id="loader" class="loader">
+                    <div class="loader-content">
+                        <label><b class="blink">Mohon Tunggu...</b></label>
+                        <div class="loading"></div>
+                        <label>System sedang mengecek Khodam anda!</label>
+                    </div>
+                </div>
+                <div id="hasilKhodam" class="results-summary-container">
+                    <div class="result-text-box">
+                        <p id="resultKhodamName" class="heading-secondary"></p>
+                    </div>
+                    <div class="summary__cta">
+                        <button id="btnLanjut" class="btn">
+                            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+                                <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+                            </svg>
+                            <span class="text">Coba Nama Lain</span>
+                        </button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const khodamList = [
+            "Cicak Buntung", "Kijang Inova", "Kelinci Terbang", "Aing Maung", "Tutup Termos", "Kak Gem", "Supra Geter", "Inces x500", "Jenglot Ompong",
+            "Jenglot Gondrong", "Tokek Albino", "Ulet Pete", "Tokek Budug", "Buaya Laut", "Ikan Piranha",
+            "Pocong Terbang", "Kakek Zeus x500", "Bangke Monyet", "Buto Ijo", "Kuntilanak Pink",
+            "Ikan Koi", "Kura-kura Ninja", "Bunglon Albino", "Buaya Buntung", "Landak Albino", "Kuda Air",
+            "Ulet Sagu", "Spiderman", "Biawak Sumatera", "Ayam Kfc", "Tuyul Mohawk", "Genderuwo Mulet",
+            "Tuyul Mulet", "Pocong Hardcore", "Undur-undur Maju", "Pocong Birahi", "Macan Sumatra",
+            "Panda Sumatera", "Cacing SliterIo", "Musang Birahi", "Tuyul Moshing", "Rice Cooker", "Velg Mio"
+        ];
+
+        const btnCek = document.getElementById('btnCek');
+        const inputNama = document.getElementById('inputNama');
+        const loader = document.getElementById('loader');
+        const hasilKhodam = document.getElementById('hasilKhodam');
+        const resultKhodamName = document.getElementById('resultKhodamName');
+        const inputSection = document.getElementById('inputSection');
+
+        btnCek.addEventListener('click', function() {
+            const nama = inputNama.value.trim();
+
+            if (nama !== '') {
+                inputSection.style.display = 'none';
+                loader.style.display = 'flex';
+                hasilKhodam.style.display = 'none';
+
+                setTimeout(function() {
+                    const randomKhodam = khodamList[Math.floor(Math.random() * khodamList.length)];
+
+                    loader.style.display = 'none';
+                    hasilKhodam.style.display = 'block';
+                    resultKhodamName.innerHTML = `Khodam yang dimiliki <span style="color: red; font-family: 'Mochiy Pop One', sans-serif;"><font size="6">${nama}</font></span> adalah: </span><br><br><span style="color: cyan; font-family: 'Mochiy Pop One', sans-serif;"><font size="16">${randomKhodam}</font></span><br><br>`;
+                }, 3000);
+            } else {
+                alert('Masukkan nama terlebih dahulu!');
+            }
+        });
+
+        const btnLanjut = document.getElementById('btnLanjut');
+        btnLanjut.addEventListener('click', function() {
+            inputSection.style.display = 'block';
+            hasilKhodam.style.display = 'none';
+            inputNama.value = '';  // Mengosongkan input
+        });
+    </script>
+</body>
+</html>
